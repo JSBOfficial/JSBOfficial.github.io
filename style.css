@@ -1,0 +1,186 @@
+/* General Resets */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Makes links look like regular text */
+a:hover {
+    color: #0056b3;
+}
+
+.inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* 1. Ticker Bar Styling */
+.ticker-bar {
+    background-color: #000;
+    /* Black background for the whole bar */
+    height: 35px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-label {
+    background-color: #0056b3;
+    /* The Blue Mask */
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    z-index: 10;
+    /* Keeps it on top of the text */
+    position: relative;
+}
+
+.ticker-window {
+    flex-grow: 1;
+    overflow: hidden;
+    /* This makes text disappear behind the blue label */
+    position: relative;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-ticker 25s linear infinite;
+}
+
+@keyframes scroll-ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.nav-arrows {
+    padding-left: 15px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* 2. Header & Navigation */
+.main-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header-flex {
+    justify-content: space-between;
+}
+
+.logo {
+    height: 35px;
+}
+
+.search-box {
+    background: #f4f4f4;
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: #999;
+    font-size: 13px;
+}
+
+.sub-nav {
+    border-bottom: 1px solid #eee;
+}
+
+.nav-flex {
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+.utility-menu {
+    font-weight: bold;
+    color: #444;
+}
+
+/* 3. Article Content */
+.article-section {
+    padding: 40px 0;
+}
+
+.article-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.category {
+    color: #0056b3;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.image-caption {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+    line-height: 1.4;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icon-circle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #555;
+}
